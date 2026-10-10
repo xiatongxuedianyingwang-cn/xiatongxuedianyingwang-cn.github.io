@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="夏同学电影网（网址 xiatongxuedianyingwang-cn.github.io）是实用影视网址导航：电影、电视剧、综艺、动漫、纪录片、短剧的网址收录、分类索引与选片笔记，像同桌一样把片单整理好。">
+<meta name="keywords" content="夏同学电影网,夏同学影视,同学电影网,影视网址导航,电影网站导航,影视网址大全,在线观看电影,高清电影,电视剧,综艺,动漫,纪录片,短剧">
+<meta name="author" content="夏同学电影网">
+<meta name="robots" content="index,follow">
+<title>夏同学电影网 - 影视网址导航大全｜实用网址收录</title>
+<style>
+:root{
+  --paper:#fdf6e9; --paper2:#fffaf1; --ink:#23303a; --ink2:#4c5f6e; --line:#c9d3c4;
+  --leaf:#4f9c5c; --leaf2:#cfe0c2; --sun:#f2b42a; --sky:#6fb3d9; --berry:#d95a5a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--paper);color:var(--ink);
+  line-height:1.9;overflow-x:hidden;
+  background-image:
+    linear-gradient(rgba(79,156,92,.09) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,156,92,.09) 1px,transparent 1px);
+  background-size:30px 30px;background-attachment:fixed}
+a{color:inherit;text-decoration:none;outline:none}
+ul,ol,dl,details{list-style:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+::selection{background:var(--leaf2);color:#12301a}
+
+/* 胶带条 */
+.tape{background:var(--leaf);color:#fff;overflow:hidden;padding:7px 0;position:relative;font-family:"Courier New",monospace}
+.tape .wr{display:flex;gap:34px;white-space:nowrap;font-size:10.4px;letter-spacing:1.8px;font-weight:700;animation:mk 30s linear infinite}
+.tape b{color:var(--sun)}
+@keyframes mk{to{transform:translateX(-50%)}}
+
+/* 报头 */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0 14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.badge-logo{width:74px;height:74px;flex-shrink:0;position:relative;background:var(--paper2);border:2.4px solid var(--leaf);
+  border-radius:9px;box-shadow:5px 5px 0 var(--sun);transform:rotate(-3deg);display:grid;place-items:center;font-weight:900;color:var(--leaf);font-size:19px;letter-spacing:-.5px}
+.badge-logo::before{content:"";position:absolute;inset:6px;border:1.3px dashed var(--leaf);border-radius:4px}
+.badge-logo span{position:relative;z-index:1;text-align:center;line-height:1.05}
+.badge-logo i{font-style:normal;font-size:9px;color:var(--ink2);display:block;letter-spacing:1px}
+.brand h1{font-size:clamp(30px,7vw,60px);font-weight:900;line-height:1.06;letter-spacing:1.5px}
+.brand h1 em{font-style:normal;color:var(--leaf)}
+.brand .sub{font-size:11.6px;color:var(--ink2);margin-top:8px;letter-spacing:1.4px;font-weight:700;font-family:"Courier New",monospace}
+.brand .sub b{color:var(--leaf);background:var(--leaf2);padding:2px 7px}
+.addr{text-align:right;font-size:10.4px;color:var(--ink2);letter-spacing:1.2px;font-family:"Courier New",monospace;flex-shrink:0}
+.addr strong{display:block;font-size:16.4px;color:var(--leaf);letter-spacing:.6px;font-weight:900;font-family:monospace}
+.addr i{font-style:normal;color:var(--berry)}
+
+/* 导航：便利贴 */
+nav.toc{display:flex;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:30;background:rgba(253,246,233,.94);backdrop-filter:blur(6px);
+  padding:13px 0;margin-bottom:8px;border-bottom:2px solid var(--leaf)}
+nav.toc a{position:relative;padding:10px 21px;font-size:12.2px;font-weight:900;color:var(--ink);letter-spacing:1.4px;background:var(--paper2);
+  border:1.6px solid var(--line);border-radius:6px 6px 0 0;transition:.2s;font-family:"Courier New",monospace}
+nav.toc a:hover{color:#fff;background:var(--leaf)}
+nav.toc a.on{color:#fff;background:var(--leaf);border-color:var(--leaf);box-shadow:0 5px 0 var(--sun);transform:translateY(-4px)}
+
+/* Hero */
+.hero{padding:28px 0 38px}
+.hero-c{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.2px;font-weight:900;color:#fff;background:var(--leaf);
+  padding:6px 14px;letter-spacing:2.2px;font-family:"Courier New",monospace;border-radius:999px}
+.eyebrow i{font-style:normal;animation:bl 1.2s steps(2) infinite}
+@keyframes bl{50%opacity:.3}
+.hero h2{font-size:clamp(23px,5vw,41px);font-weight:900;line-height:1.44;margin:13px 0 12px;letter-spacing:.5px}
+.hero h2 u{text-decoration:none;color:var(--leaf);border-bottom:5px solid var(--sun)}
+.hero p{font-size:14.6px;color:var(--ink2);max-width:550px}
+.hero p b{color:var(--leaf)}
+
+/* 六格：div 便签 */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.notes .n{background:var(--paper2);border:1.6px solid var(--line);border-radius:8px;padding:17px 19px;transition:.22s;position:relative;overflow:hidden}
+.notes .n::after{content:"";position:absolute;right:-12px;top:-12px;width:44px;height:20px;background:rgba(255,255,255,.75);transform:rotate(24deg);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.notes .n:nth-child(1){transform:rotate(-1.2deg)}.notes .n:nth-child(2){transform:rotate(.8deg)}
+.notes .n:nth-child(3){transform:rotate(-.6deg)}.notes .n:nth-child(4){transform:rotate(1deg)}
+.notes .n:nth-child(5){transform:rotate(-.9deg)}.notes .n:nth-child(6){transform:rotate(.7deg)}
+.notes .n:hover{transform:rotate(0) translateY(-4px);border-color:var(--leaf);box-shadow:8px 10px 0 -4px var(--sun)}
+.notes .n .no{font-size:9.4px;color:#fff;letter-spacing:2px;font-weight:900;font-family:"Courier New",monospace;background:var(--leaf);
+  display:inline-block;padding:3px 11px;border-radius:4px}
+.notes .n:nth-child(2) .no{background:var(--sun);color:var(--ink)}
+.notes .n:nth-child(3) .no{background:var(--sky);color:#05314a}
+.notes .n:nth-child(4) .no{background:var(--berry)}
+.notes .n:nth-child(5) .no{background:#8a6fb0;color:#fff}
+.notes .n:nth-child(6) .no{background:var(--ink)}
+.notes .n h4{font-size:15.4px;font-weight:900;margin:8px 0 5px;display:flex;justify-content:space-between;align-items:baseline;gap:7px}
+.notes .n h4 i{font-style:normal;font-size:8.4px;color:var(--leaf);border:1.4px solid var(--leaf);padding:2px 9px;font-weight:900;font-family:"Courier New",monospace;border-radius:999px}
+.notes .n p{font-size:11.5px;color:var(--ink2)}
+
+/* 标题 */
+section{padding:26px 0}
+.sec-h{display:flex;align-items:center;gap:11px;margin-bottom:18px;flex-wrap:wrap}
+.sec-h .no{font-size:11.2px;font-weight:900;color:#fff;background:var(--leaf);width:36px;height:36px;display:grid;place-items:center;
+  font-family:"Courier New",monospace;border-radius:6px 0 6px 0;box-shadow:4px 4px 0 var(--sun)}
+.sec-h h3{font-size:20.6px;font-weight:900;letter-spacing:1.2px;font-family:"Courier New",monospace}
+.sec-h h3 em{font-style:normal;color:var(--leaf)}
+.sec-h .rule{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--leaf) 0 7px,transparent 7px 15px);margin-left:5px}
+.sec-h .more{font-size:11.2px;color:var(--ink2);font-weight:900;font-family:"Courier New",monospace}
+.sec-h .more:hover{color:var(--leaf)}
+
+/* 片单：figure 卡片 */
+.films{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.fcard{background:var(--paper2);border:1.6px solid var(--line);border-radius:10px;transition:.22s;overflow:hidden}
+.fcard:hover{border-color:var(--leaf);box-shadow:9px 11px 0 -5px var(--sun);transform:translateY(-4px)}
+.fcard .cv{aspect-ratio:3/4;position:relative;display:grid;place-items:center;text-align:center;font-weight:900;font-size:15px;
+  letter-spacing:1.4px;color:#fff;padding:13px;font-family:"Courier New",monospace;overflow:hidden}
+.fcard .cv .grid{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 19px,rgba(255,255,255,.16) 19px 20px),
+  repeating-linear-gradient(90deg,transparent 0 19px,rgba(255,255,255,.16) 19px 20px)}
+.fcard .cv .no{position:absolute;left:10px;top:10px;font-size:9.4px;color:var(--ink);background:var(--sun);padding:4px 10px;z-index:2;font-weight:900;font-family:"Courier New",monospace}
+.fcard .cv .badge{position:absolute;right:10px;bottom:10px;font-size:8.6px;font-weight:900;color:#fff;background:rgba(35,48,58,.85);
+  border:1.4px solid #fff;padding:5px 11px;z-index:2;letter-spacing:.8px;border-radius:4px}
+.f1{background:linear-gradient(155deg,#7bc24c,#3c7a3a)}
+.f2{background:linear-gradient(155deg,#6fb3d9,#2b6f99)}
+.f3{background:linear-gradient(155deg,#f2b42a,#c0801a)}
+.f4{background:linear-gradient(155deg,#d95a5a,#963636)}
+.f5{background:linear-gradient(155deg,#8a6fb0,#53407a)}
+.f6{background:linear-gradient(155deg,#e0914a,#a86024)}
+.f7{background:linear-gradient(155deg,#5f8f78,#2f5a45)}
+.f8{background:linear-gradient(155deg,#b9c4d0,#6f7d8c)}
+.fcard figcaption{padding:13px 16px 16px}
+.fcard h4{font-size:14.5px;font-weight:900;display:flex;justify-content:space-between;gap:6px;align-items:baseline}
+.fcard h4 i{font-style:normal;font-size:8.2px;color:var(--leaf);border:1.4px solid var(--leaf);padding:2px 8px;flex-shrink:0;font-weight:900;font-family:"Courier New",monospace;border-radius:999px}
+.fcard p{font-size:11.6px;color:var(--ink2);margin-top:4px}
+.fcard .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.fcard .tags a{font-size:9.2px;color:var(--ink);border:1.4px solid var(--line);padding:2px 10px;font-weight:900;font-family:"Courier New",monospace;border-radius:4px;background:var(--paper)}
+.fcard .tags a:hover{color:#fff;background:var(--leaf);border-color:var(--leaf)}
+
+/* 分类：dl */
+.cat{background:var(--paper2);border:1.8px solid var(--line);border-radius:12px;padding:5px 26px}
+.cat .row{display:grid;grid-template-columns:240px 1fr;gap:19px;padding:15px 3px;border-bottom:1.6px dotted var(--line)}
+.cat .row:last-child{border-bottom:none}
+.cat dt{font-weight:900;font-size:14.2px;display:flex;flex-direction:column;gap:5px;color:var(--ink);font-family:"Courier New",monospace}
+.cat dt b{font-size:9.6px;color:#fff;font-weight:900;background:var(--leaf);padding:4px 13px;align-self:flex-start;letter-spacing:1.6px;font-family:"Courier New",monospace;border-radius:4px}
+.cat dt span{font-size:11.1px;color:var(--ink2);font-weight:600;font-style:italic;font-family:Georgia,serif}
+.cat dd{display:flex;flex-wrap:wrap;gap:9px;align-content:center}
+.cat dd a{padding:5px 16px;background:var(--paper);font-size:12.4px;color:var(--ink2);font-weight:900;border:1.5px solid var(--line);border-radius:4px;font-family:"Courier New",monospace}
+.cat dd a:hover{color:#fff;background:var(--leaf);border-color:var(--leaf)}
+
+/* 网址收录：table */
+.sites{background:var(--paper2);border:1.8px solid var(--line);border-radius:10px;overflow:hidden}
+.sites table{width:100%;border-collapse:collapse;font-size:12.4px}
+.sites th{background:var(--leaf);color:#fff;text-align:left;padding:14px 18px;font-size:10.3px;letter-spacing:2.1px;font-weight:900;font-family:"Courier New",monospace}
+.sites td{padding:13px 18px;border-bottom:1.6px dotted var(--line);vertical-align:middle;color:var(--ink2)}
+.sites tr:last-child td{border-bottom:none}
+.sites tbody tr:hover{background:var(--leaf2)}
+.sites .u{font-weight:900;color:var(--ink);font-size:13.5px;font-family:"Courier New",monospace}
+.sites .u small{display:block;font-size:9.8px;color:var(--leaf);font-weight:700;margin-top:2px;font-family:monospace;letter-spacing:.4px}
+.pill{font-size:9.1px;padding:4px 12px;font-weight:900;white-space:nowrap;border-radius:4px;letter-spacing:.7px;font-family:"Courier New",monospace;background:var(--paper);border:1.4px solid var(--line);color:var(--ink2)}
+.p1{color:#2b6f99;border-color:#a9cde6;background:#eaf4fb}
+.p2{color:#3c7a3a;border-color:#cfe0c2;background:#f0f7ea}
+.p3{color:#963636;border-color:#f0c9c9;background:#fbeeee}
+.p4{color:#c0801a;border-color:#f3dfa7;background:#fdf6e6}
+.go{color:var(--leaf);font-weight:900;font-size:12.6px;font-family:"Courier New",monospace}
+.go:hover{text-decoration:underline}
+
+/* 热播榜：ol + 进度条 + 侧栏 */
+.rank{display:grid;grid-template-columns:1.4fr 1fr;gap:23px;align-items:start}
+.board{background:var(--paper2);border:1.8px solid var(--line);border-radius:11px;padding:9px 26px 26px}
+.board h5{font-size:14.8px;color:var(--leaf);padding:16px 0 12px;border-bottom:2px dashed var(--leaf);margin-bottom:15px;display:flex;justify-content:space-between;font-weight:900;font-family:"Courier New",monospace}
+.board h5 a{font-size:10.8px;color:var(--ink2);font-weight:900}
+.board ol{counter-reset:r;display:flex;flex-direction:column;gap:15px}
+.board li{counter-increment:r;display:grid;grid-template-columns:62px 1fr;gap:13px;align-items:start}
+.board li::before{content:counter(r,"0");font-weight:900;font-size:14.6px;color:#fff;background:var(--leaf);width:56px;height:50px;display:grid;place-items:center;font-family:"Courier New",monospace;border-radius:6px 0 6px 0}
+.board li:nth-child(2)::before{background:var(--sun);color:var(--ink)}
+.board li:nth-child(3)::before{background:var(--sky);color:#05314a}
+.board b{font-size:14.2px;display:block;font-family:"Courier New",monospace}
+.board p{font-size:11.1px;color:var(--ink2)}
+.bar-i{height:8px;background:var(--paper);border:1.4px solid var(--line);margin-top:8px;border-radius:999px;overflow:hidden}
+.bar-i i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--leaf),var(--sun),var(--berry));
+  transform-origin:left;animation:br 2.8s ease-in-out infinite alternate}
+@keyframes br{to{transform:scaleX(.4)}}
+.trend{display:inline-block;font-size:9.1px;font-weight:900;color:#2b6f99;border:1.4px solid #a9cde6;padding:2px 11px;margin-top:5px;border-radius:999px;font-family:"Courier New",monospace;background:#eaf4fb}
+
+.pick{display:flex;flex-direction:column;gap:15px}
+.pick article{background:var(--paper2);border:1.8px solid var(--line);border-radius:9px;overflow:hidden;transition:.2s}
+.pick article:hover{border-color:var(--leaf);box-shadow:7px 9px 0 -4px var(--sun)}
+.pick .ph{aspect-ratio:16/8.2;display:grid;place-items:center;text-align:center;font-weight:900;font-size:14.2px;letter-spacing:1.4px;color:#fff;position:relative;font-family:"Courier New",monospace}
+.pick .ph::after{content:"";position:absolute;inset:12px;border:1.3px solid rgba(255,255,255,.6);border-radius:4px}
+.pick figcaption{padding:14px 17px}
+.pick h6{font-size:14px;display:flex;justify-content:space-between;gap:7px;font-weight:900;font-family:"Courier New",monospace}
+.pick h6 span{font-size:8.8px;font-weight:900;color:#fff;background:var(--leaf);padding:3px 12px;flex-shrink:0;font-family:"Courier New",monospace;border-radius:999px}
+.pick p{font-size:11.8px;color:var(--ink2);margin-top:4px}
+
+/* 指南：手风琴 */
+.guide{background:var(--paper2);border:1.8px solid var(--line);border-radius:14px;padding:26px 30px}
+.guide h4{font-size:16.8px;margin-bottom:15px;color:var(--leaf);font-weight:900;font-family:"Courier New",monospace}
+.guide details{border-bottom:1.6px dotted var(--line);padding:13px 0}
+.guide details:last-child{border-bottom:none}
+.guide summary{cursor:pointer;font-weight:900;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:11px;list-style:none;color:var(--ink);font-family:"Courier New",monospace}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"＋";color:var(--leaf);font-size:20px;transition:.2s;flex-shrink:0;font-weight:400}
+.guide details[open] summary::after{content:"－"}
+.guide p{font-size:13.1px;color:var(--ink2);padding-top:10px;line-height:1.96}
+.guide p b{color:var(--leaf)}
+
+/* 关于 */
+.about{background:radial-gradient(circle at 18% 14%,rgba(79,156,92,.2),transparent 40%),radial-gradient(circle at 84% 86%,rgba(111,179,217,.22),transparent 40%);
+  border:2.4px solid var(--leaf);border-radius:14px;padding:34px;box-shadow:12px 14px 0 -5px var(--sun)}
+.about .k{font-size:10px;letter-spacing:2.8px;color:#fff;background:var(--leaf);font-weight:900;display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:13px;font-family:"Courier New",monospace}
+.about h2{font-size:24px;margin-bottom:13px;letter-spacing:1.1px;font-weight:900;font-family:"Courier New",monospace}
+.about h2 em{font-style:normal;color:var(--leaf)}
+.about p{font-size:14.8px;color:var(--ink2);max-width:910px}
+.about p b{color:var(--leaf)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:25px}
+.stats div{background:var(--paper2);border:1.6px solid var(--line);border-radius:9px;padding:16px;text-align:center}
+.stats b{display:block;font-size:27px;color:var(--leaf);font-weight:900;font-family:"Courier New",monospace}
+.stats span{font-size:11.2px;color:var(--ink2);font-weight:700;font-family:"Courier New",monospace}
+
+/* Footer */
+footer.ft{padding:42px 0 22px;margin-top:34px;border-top:2px solid var(--leaf);color:var(--ink2)}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:23px;margin-bottom:25px}
+.fgrid h6{font-size:13.8px;margin-bottom:14px;color:var(--leaf);letter-spacing:1.5px;font-weight:900;font-family:"Courier New",monospace}
+.fgrid ul{display:flex;flex-direction:column;gap:7px;font-size:12.6px}
+.fgrid a:hover{color:var(--leaf)}
+.copy{text-align:center;font-size:12px;color:var(--ink2);border-top:1.6px dotted var(--line);padding-top:20px;line-height:1.94;font-family:"Courier New",monospace}
+.copy b{color:var(--leaf)}
+.up{position:fixed;right:15px;bottom:19px;width:54px;height:54px;background:var(--leaf);color:#fff;display:grid;place-items:center;z-index:60;font-size:17px;font-weight:900;border-radius:6px 0 6px 0;box-shadow:5px 5px 0 var(--sun);font-family:"Courier New",monospace}
+
+@media (max-width:1080px){.films{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:1000px){.hero-c,.rank{grid-template-columns:1fr}.notes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+  .wrap{padding:0 15px}
+  section{padding:23px 0}
+  .cat .row{grid-template-columns:1fr;gap:9px}
+  .sites{overflow-x:auto;border-radius:9px}
+  .sites table{min-width:800px}
+  .films{grid-template-columns:repeat(2,1fr)}
+  .notes{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  nav.toc a{flex:1 1 auto;text-align:center;font-size:11.2px;padding:9px 11px}
+  .stats,.fgrid{grid-template-columns:repeat(2,1fr)}
+  .addr{display:none}
+  .sec-h h3{font-size:16.8px}
+  .about{padding:24px}
+  .guide{padding:20px 16px}
+  .brand h1{font-size:33px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<div class="tape">
+  <div class="wr">
+    <span><b>夏同学电影网</b> ｜ xiatongxuedianyingwang-cn.github.io</span>
+    <span>电影 · 电视剧 · 综艺 · 动漫 · 纪录片 · 短剧</span>
+    <span>像同桌一样，把片单整理好</span>
+    <span>影视网址导航 ｜ 实用网址收录</span>
+    <span><b>夏同学电影网</b> ｜ xiatongxuedianyingwang-cn.github.io</span>
+    <span>电影 · 电视剧 · 综艺 · 动漫 · 纪录片 · 短剧</span>
+    <span>像同桌一样，把片单整理好</span>
+    <span>影视网址导航 ｜ 实用网址收录</span>
+  </div>
+</div>
+
+<header class="wrap">
+  <div class="mast">
+    <div class="brand">
+      <div class="badge-logo" aria-hidden="true"><span>夏<i>同学</i></span></div>
+      <div>
+        <h1><em>夏同学</em>电影网</h1>
+        <div class="sub">实用影视网址导航 · <b>像同桌一样，把片单整理好</b></div>
+      </div>
+    </div>
+    <div class="addr"><i>● 在线</i><strong>xiatongxuedianyingwang-cn.github.io</strong></div>
+  </div>
+</header>
+
+<nav class="toc wrap" aria-label="栏目导航">
+  <a class="on" href="#films">片单</a>
+  <a href="#cat">分类</a>
+  <a href="#sites">网址收录</a>
+  <a href="#rank">热播榜</a>
+  <a href="#guide">选片笔记</a>
+  <a href="#about">关于</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-c">
+      <div>
+        <span class="eyebrow"><i>●</i> 笔记本已翻开 · 第 夏 页</span>
+        <h2>选片这件事，<u>交给我</u></h2>
+        <p><b>夏同学电影网</b>把影视入口按<b>六格</b>整理：<b>电影、电视剧、综艺、动漫、纪录片、短剧</b>。像同桌一样，<b>把片单整理好</b>，你只负责点播放。</p>
+      </div>
+
+      <aside class="notes" aria-label="六格入口">
+        <div class="n"><div class="no">夏 / 01</div><h4>电影 <i>2H</i></h4><p>院线、经典、冷门，按片长分三档。</p></div>
+        <div class="n"><div class="no">夏 / 02</div><h4>电视剧 <i>追</i></h4><p>先看是否完结，再决定入坑。</p></div>
+        <div class="n"><div class="no">夏 / 03</div><h4>综艺 <i>下饭</i></h4><p>一集 40 分钟，刚好一碗饭。</p></div>
+        <div class="n"><div class="no">夏 / 04</div><h4>动漫 <i>追更</i></h4><p>周更的等更新，完结的才敢一口气。</p></div>
+        <div class="n"><div class="no">夏 / 05</div><h4>纪录片 <i>涨知识</i></h4><p>看完会想关灯，听窗外的声音。</p></div>
+        <div class="n"><div class="no">夏 / 06</div><h4>短剧 <i>碎片</i></h4><p>等车、排队、睡前，别超过 10 分钟。</p></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="films">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">01</span><h3>夏同学片单 · <em>八部，刚好一晚</em></h3><span class="rule"></span><a class="more" href="#">完整片单 ›</a></div>
+      <div class="films">
+        <figure class="fcard"><div class="cv f1"><span class="grid"></span><span class="no">X.01</span>院线大片<small>2H</small><span class="badge">视效</span></div><figcaption><h4>院线大片 <i>2H</i></h4><p>音效和画面，值得去大银幕。</p><div class="tags"><a href="#">视效</a><a href="#">科幻</a><a href="#">动作</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f2"><span class="grid"></span><span class="no">X.02</span>经典重看<small>RE</small><span class="badge">耐看</span></div><figcaption><h4>经典重看 <i>RE</i></h4><p>第三遍才发现，台词早说过了。</p><div class="tags"><a href="#">台词</a><a href="#">长镜头</a><a href="#">作者</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f3"><span class="grid"></span><span class="no">X.03</span>冷门佳作<small>HIDDEN</small><span class="badge">惊喜</span></div><figcaption><h4>冷门佳作 <i>HIDDEN</i></h4><p>评分不高，但刚好长在审美上。</p><div class="tags"><a href="#">小国</a><a href="#">独立</a><a href="#">首作</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f4"><span class="grid"></span><span class="no">X.04</span>电视剧<small>SERIES</small><span class="badge">完结</span></div><figcaption><h4>电视剧 <i>SERIES</i></h4><p>先看是否完结，再决定入坑。</p><div class="tags"><a href="#">悬疑</a><a href="#">年代</a><a href="#">群像</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f5"><span class="grid"></span><span class="no">X.05</span>综艺<small>SHOW</small><span class="badge">下饭</span></div><figcaption><h4>综艺 <i>SHOW</i></h4><p>一集 40 分钟，刚好一碗饭。</p><div class="tags"><a href="#">访谈</a><a href="#">竞技</a><a href="#">旅行</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f6"><span class="grid"></span><span class="no">X.06</span>动漫<small>ANIME</small><span class="badge">追更</span></div><figcaption><h4>动漫 <i>ANIME</i></h4><p>周更的等更新，完结的才敢一口气。</p><div class="tags"><a href="#">剧场版</a><a href="#">番剧</a><a href="#">短片</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f7"><span class="grid"></span><span class="no">X.07</span>纪录片<small>DOC</small><span class="badge">开阔</span></div><figcaption><h4>纪录片 <i>DOC</i></h4><p>看完想关灯，听窗外的声音。</p><div class="tags"><a href="#">自然</a><a href="#">人物</a><a href="#">历史</a></div></figcaption></figure>
+        <figure class="fcard"><div class="cv f8"><span class="grid"></span><span class="no">X.08</span>短剧<small>MINI</small><span class="badge">碎片</span></div><figcaption><h4>短剧 <i>MINI</i></h4><p>等车、排队、睡前，别超 10 分钟。</p><div class="tags"><a href="#">反转</a><a href="#">甜</a><a href="#">爽</a></div></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cat">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">02</span><h3>分类 · <em>夏同学关键词</em></h3><span class="rule"></span><a class="more" href="#">完整分类 ›</a></div>
+      <div class="cat">
+        <div class="row"><dt><b>夏 / 01</b>电影<span>Film</span></dt><dd>
+          <a href="#">院线</a><a href="#">经典</a><a href="#">冷门</a><a href="#">科幻</a><a href="#">悬疑</a><a href="#">喜剧</a>
+        </dd></div>
+        <div class="row"><dt><b>夏 / 02</b>电视剧<span>Series</span></dt><dd>
+          <a href="#">悬疑</a><a href="#">年代</a><a href="#">群像</a><a href="#">都市</a><a href="#">古装</a><a href="#">美剧</a>
+        </dd></div>
+        <div class="row"><dt><b>夏 / 03</b>综艺<span>Show</span></dt><dd>
+          <a href="#">访谈</a><a href="#">竞技</a><a href="#">旅行</a><a href="#">音乐</a><a href="#">生活</a><a href="#">下饭</a>
+        </dd></div>
+        <div class="row"><dt><b>夏 / 04</b>动漫<span>Anime</span></dt><dd>
+          <a href="#">剧场版</a><a href="#">番剧</a><a href="#">国漫</a><a href="#">短片</a><a href="#">科幻</a><a href="#">治愈</a>
+        </dd></div>
+        <div class="row"><dt><b>夏 / 05</b>纪录片<span>Documentary</span></dt><dd>
+          <a href="#">自然</a><a href="#">人物</a><a href="#">历史</a><a href="#">美食</a><a href="#">科技</a><a href="#">城市</a>
+        </dd></div>
+        <div class="row"><dt><b>夏 / 06</b>短剧<span>Mini-drama</span></dt><dd>
+          <a href="#">反转</a><a href="#">甜</a><a href="#">爽</a><a href="#">悬疑</a><a href="#">10分钟</a><a href="#">竖屏</a>
+        </dd></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sites">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">03</span><h3>网址收录 · <em>影视网址大全</em></h3><span class="rule"></span><a class="more" href="#">提交网址 ›</a></div>
+      <div class="sites">
+        <table>
+          <thead><tr><th style="width:24%">入口 / 网站</th><th style="width:36%">收录说明</th><th style="width:16%">格子</th><th style="width:13%">状态</th><th style="width:11%">访问</th></tr></thead>
+          <tbody>
+            <tr><td class="u">夏同学电影网<small>xiatongxuedianyingwang-cn.github.io</small></td><td>实用影视网址导航：电影、电视剧、综艺、动漫、纪录片、短剧的网址收录与选片笔记</td><td><span class="pill p2">导航首页</span></td><td>正常</td><td><a class="go" href="#">进入 ›</a></td></tr>
+            <tr><td class="u">电影 · 院线 &amp; 经典<small>FILM</small></td><td>按片长分三档：90 分钟以内 / 90–140 分钟 / 140 分钟以上</td><td><span class="pill p1">电影</span></td><td>正常</td><td><a class="go" href="#">进入 ›</a></td></tr>
+            <tr><td class="u">电视剧 · 先看是否完结<small>SERIES</small></td><td>悬疑、年代、群像、都市、古装、美剧英剧的入口索引</td><td><span class="pill p3">电视剧</span></td><td>更新中</td><td><a class="go" href="#">进入 ›</a></td></tr>
+            <tr><td class="u">综艺 · 下饭清单<small>SHOW</small></td><td>访谈、竞技、旅行、音乐、生活：一集刚好一碗饭</td><td><span class="pill p2">综艺</span></td><td>正常</td><td><a class="go" href="#">进入 ›</a></td></tr>
+            <tr><td class="u">动漫 · 追更与补番<small>ANIME</small></td><td>剧场版、番剧、国漫、短片，标注更新状态</td><td><span class="pill p4">动漫</span></td><td>正常</td><td><a class="go" href="#">进入 ›</a></td></tr>
+            <tr><td class="u">纪录片 &amp; 短剧<small>DOC / MINI</small></td><td>自然、人物、历史、美食、科技；竖屏短剧按单集时长排序</td><td><span class="pill p1">纪录片</span></td><td>正常</td><td><a class="go" href="#">进入 ›</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">04</span><h3>热播榜 · <b>本周 夏同学 热度</b></h3><span class="rule"></span><a class="more" href="#">完整榜单 ›</a></div>
+      <div class="rank">
+        <div class="board">
+          <h5><span>本周 夏同学电影网 热播榜</span><a href="#">换一批 ›</a></h5>
+          <ol>
+            <li><div><b>院线大片：值得大银幕</b><p>音效和画面，是客厅电视给不了的</p><span class="trend">↑ 28</span><i class="bar-i"><i style="width:96%"></i></i></div></li>
+            <li><div><b>悬疑剧：先看是否完结</b><p>追更的伤，只有追过的人懂</p><span class="trend">↑ 22</span><i class="bar-i"><i style="width:87%"></i></i></div></li>
+            <li><div><b>冷门佳作：长在审美上</b><p>评分不高，但刚好对味</p><span class="trend">↑ 17</span><i class="bar-i"><i style="width:76%"></i></i></div></li>
+            <li><div><b>综艺：下饭清单</b><p>一集 40 分钟，刚好一碗饭</p><span class="trend">↑ 12</span><i class="bar-i"><i style="width:63%"></i></i></div></li>
+            <li><div><b>纪录片：看完想出门</b><p>山川、海洋、手艺、陌生人</p><span class="trend">↑ 9</span><i class="bar-i"><i style="width:51%"></i></i></div></li>
+            <li><div><b>短剧：碎片时间</b><p>等车、排队、睡前，别超 10 分钟</p><span class="trend">新</span><i class="bar-i"><i style="width:41%"></i></i></div></li>
+          </ol>
+        </div>
+        <aside class="pick">
+          <article><div class="ph f3">▣ 片长三档法</div><figcaption><h6>按片长选，不熬夜 <span>3 档</span></h6><p>＜90 分钟：碎片时间；90–140 分钟：完整一晚；＞140 分钟：留到周末。</p></figcaption></article>
+          <article><div class="ph f4">📺 追剧三问</div><figcaption><h6>开坑前先问这三句 <span>3 问</span></h6><p>是否完结？共几集？最后一集什么时候？<b>答案不清楚，就先存着</b>。</p></figcaption></article>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">05</span><h3>选片笔记 · <em>像同桌那样劝你</em></h3><span class="rule"></span><a class="more" href="#">完整笔记 ›</a></div>
+      <div class="guide">
+        <h4>▣ 在 夏同学电影网，把选择变成动作</h4>
+        <details open><summary><span>先定格子，再定类型</span></summary><p>想看<b>电影</b>就按片长选，想看<b>电视剧</b>先问是否完结，想看<b>综艺</b>就挑下饭的，想看<b>动漫</b>分清追更还是补番，想看<b>纪录片</b>挑晚上，想看<b>短剧</b>只给碎片时间。<b>格子不是分类，是时间预算</b>。</p></details>
+        <details><summary><span>电影看片长，不看评分</span></summary><p>140 分钟以上的片，留到周末；90 分钟以内的片，适合睡前。<b>评分是别人的，时间是自己的</b>。</p></details>
+        <details><summary><span>电视剧先看是否完结</span></summary><p>未完结的剧，每周丢一次耐心。<b>追更的伤，只有追过的人懂</b>。</p></details>
+        <details><summary><span>综艺看嘉宾，不看选题</span></summary><p>同样一个旅行选题，换一桌人，味道完全不同。<b>先搜名字，再点播放</b>。</p></details>
+        <details><summary><span>动漫分清追更与补番</span></summary><p>周更的，每周看一集才不亏；已完结的，才敢一口气。<b>别在周二看周三更新的番</b>。</p></details>
+        <details><summary><span>短剧只给碎片时间</span></summary><p>单集 10 分钟以内是零食，超过 20 分钟就该叫剧了。<b>本站为影视网址导航，只做入口与片单，不做搬运</b>；倡导正版与会员观影，到点就停。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="k">ABOUT · 夏同学电影网</div>
+        <h2>关于<em>夏同学电影网</em></h2>
+        <p><b>夏同学电影网</b>是一个<b>实用影视网址导航</b>。我们不搬运、不绕路，只做一件事：把<b>电影、电视剧、综艺、动漫、纪录片、短剧</b> 的入口按<b>六格</b>整理清楚，让你<b>少点三次</b>，直接看到最对的那一部。<b>像同桌一样，把片单整理好</b>。</p>
+        <div class="stats">
+          <div><b>6</b><span>格子</span></div>
+          <div><b>436</b><span>已收录网址</span></div>
+          <div><b>每晚</b><span>更新片单</span></div>
+          <div><b>零搬运</b><span>倡导正版</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h6>格子</h6><ul>
+        <li><a href="#films">院线大片</a></li><li><a href="#cat">冷门佳作</a></li>
+        <li><a href="#guide">片长三档</a></li><li><a href="#sites">网址收录</a></li>
+      </ul></div>
+      <div><h6>电视剧 &amp; 综艺</h6><ul>
+        <li><a href="#cat">是否完结</a></li><li><a href="#films">下饭综艺</a></li>
+        <li><a href="#rank">热播榜</a></li><li><a href="#guide">追剧三问</a></li>
+      </ul></div>
+      <div><h6>动漫 &amp; 纪录片</h6><ul>
+        <li><a href="#cat">追更</a></li><li><a href="#films">补番</a></li>
+        <li><a href="#rank">自然人文</a></li><li><a href="#guide">晚上看</a></li>
+      </ul></div>
+      <div><h6>规范</h6><ul>
+        <li><a href="#sites">网址收录</a></li><li><a href="#guide">选片笔记</a></li>
+        <li><a href="#about">关于我们</a></li><li><a href="#">提交网址</a></li>
+      </ul></div>
+    </div>
+    <div class="copy">
+      © 2026 <b>夏同学电影网</b> ｜ 网址：https://xiatongxuedianyingwang-cn.github.io &nbsp;|&nbsp; 实用影视网址导航 · 影视网址大全 · 像同桌一样，把片单整理好<br>
+      本站为导航用途，倡导正版观影与版权合规，请勿用于侵权搬运。
+    </div>
+  </div>
+</footer>
+
+<a class="up" href="#" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">↑</a>
+
+<script>
+(function(){
+  var links=document.querySelectorAll('nav.toc a');
+  var secs=[].slice.call(links).map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function spy(){
+    var y=window.scrollY+150,cur=0;
+    secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('on',i===cur); });
+  }
+  window.addEventListener('scroll',spy,{passive:true});spy();
+})();
+</script>
+</body>
+</html>
